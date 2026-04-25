@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Othmane El Foual | Software Architect Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <style>
+      body {
+        background-color: #000000;
+        color: #ffffff;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      .glass-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.3s ease;
+      }
+
+      .glass-card:hover {
+        border-color: #3b82f6;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.2);
+      }
+
+      .neon-text {
+        background: linear-gradient(to right, #ffffff, #3b82f6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .btn-primary {
+        background: #ffffff;
+        color: #000000;
+        padding: 8px 18px;
+        border-radius: 10px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background: #3b82f6;
+        color: #ffffff;
+        transform: scale(1.05);
+      }
+
+      .tag {
+        font-size: 0.6rem;
+        padding: 2px 8px;
+        border-radius: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .cert-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 15px;
+        padding: 20px;
+        text-align: left;
+        display: block;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      /* البوردر موحد باللون الأزرق للجميع كما طلبت */
+      .cert-card:hover {
+        border-color: #3b82f6;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px -10px rgba(59, 130, 246, 0.15);
+      }
+
+      #scrollTopBtn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: rgba(59, 130, 246, 0.8);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(5px);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 1000;
+        box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+      }
+
+      #scrollTopBtn.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      #scrollTopBtn:hover {
+        background: #3b82f6;
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+      }
+    </style>
+  </head>
+  <body class="selection:bg-blue-500 selection:text-white p-4">
+    <nav
+      class="max-w-6xl mx-auto py-8 px-4 flex justify-between items-center"
+      data-aos="fade-down"
+      data-aos-duration="1000"
+    >
+      <div class="text-xl font-extrabold tracking-tighter italic">
+        OTHMANE<span class="text-blue-500">.</span>ENGINEER
+      </div>
+      <div class="space-x-6 text-sm text-gray-400">
+        <a href="#assets" class="hover:text-white transition">Projects</a>
+        <a href="#certificates" class="hover:text-white transition"
+          >Certifications</a
+        >
+        <a
+          href="https://github.com/othmane456"
+          target="_blank"
+          class="hover:text-white transition"
+          >GitHub</a
+        >
+        <a href="https://portofolio-theta-eight.vercel.app/" class="btn-primary"
+          >Portfolio Hub</a
+        >
+      </div>
+    </nav>
+
+    <section
+      class="max-w-4xl mx-auto mt-12 mb-20 text-center px-4"
+      data-aos="zoom-in"
+      data-aos-duration="1200"
+    >
+      <h1 class="text-5xl md:text-7xl font-extrabold neon-text mb-6">
+        My Skills Exhibition
+      </h1>
+      <p class="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto">
+        Welcome.
+      </p>
+    </section>
+
+    <section id="assets" class="max-w-6xl mx-auto px-4 pb-20">
+      <h2
+        class="text-2xl font-bold mb-12 flex items-center"
+        data-aos="fade-right"
+      >
+        <span class="w-8 h-[2px] bg-blue-500 mr-4"></span> Engineering Assets
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <span class="tag bg-blue-900/30 text-blue-400">Enterprise</span>
+            <h3 class="text-xl font-bold mt-4 mb-2">
+              <i class="bi bi-buildings text-blue-400 mr-2"></i>Enterprise CRM
+            </h3>
+            <p class="text-gray-400 text-sm mb-6">
+              Real-time business management and sales tracking system.
+            </p>
+          </div>
+          <div class="flex items-center space-x-4">
+            <a
+              href="https://enterprise-crm-system.vercel.app/"
+              target="_blank"
+              class="text-white font-bold hover:text-blue-500 transition text-sm underline decoration-blue-500"
+              >Live Demo</a
+            >
+            <a
+              href="https://github.com/othmane456/enterprise-crm-system"
+              target="_blank"
+              class="text-gray-500 hover:text-white transition text-xs"
+              >GitHub</a
+            >
+          </div>
+        </div>
+
+        <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="200">
+          <div>
+            <span class="tag bg-purple-900/30 text-purple-400"
+              >CS & Graphics</span
+            >
+            <h3 class="text-xl font-bold mt-4 mb-2">
+              <i class="bi bi-box text-purple-400 mr-2"></i>3D Visualizer
+            </h3>
+            <p class="text-gray-400 text-sm mb-6">
+              Interactive sorting visualizer built with Three.js/WebGL.
+            </p>
+          </div>
+          <div class="flex items-center space-x-4">
+            <a
+              href="https://algo-3d-visualizer-znta.vercel.app/"
+              target="_blank"
+              class="text-white font-bold hover:text-blue-500 transition text-sm underline decoration-blue-500"
+              >Live Demo</a
+            >
+            <a
+              href="https://github.com/othmane456/algo-3d-visualizer"
+              target="_blank"
+              class="text-gray-500 hover:text-white transition text-xs"
+              >GitHub</a
+            >
+          </div>
+        </div>
+
+        <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="300">
+          <div>
+            <span class="tag bg-rose-900/30 text-rose-400">E-Commerce</span>
+            <h3 class="text-xl font-bold mt-4 mb-2">
+              <i class="bi bi-shop text-rose-400 mr-2"></i>Restaurant App
+            </h3>
+            <p class="text-gray-400 text-sm mb-6">
+              A modern digital menu and ordering interface for hospitality.
+            </p>
+          </div>
+          <div class="flex items-center space-x-4">
+            <a
+              href="https://restaurant-nine-theta.vercel.app/"
+              target="_blank"
+              class="text-white font-bold hover:text-blue-500 transition text-sm underline decoration-blue-500"
+              >Live Demo</a
+            >
+            <a
+              href="https://github.com/othmane456/restaurant"
+              target="_blank"
+              class="text-gray-500 hover:text-white transition text-xs"
+              >GitHub</a
+            >
+          </div>
+        </div>
+
+        <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="400">
+          <div>
+            <span class="tag bg-orange-900/30 text-orange-400"
+              >Architecture</span
+            >
+            <h3 class="text-xl font-bold mt-4 mb-2">
+              <i class="bi bi-cone-striped text-orange-400 mr-2"></i>BuildCraft
+              UI
+            </h3>
+            <p class="text-gray-400 text-sm mb-6">
+              High-performance landing page for construction firms.
+            </p>
+          </div>
+          <div class="flex items-center space-x-4">
+            <a
+              href="https://buildcraft-kappa.vercel.app/"
+              target="_blank"
+              class="text-white font-bold hover:text-blue-500 transition text-sm underline decoration-blue-500"
+              >Live Demo</a
+            >
+            <a
+              href="https://github.com/othmane456/entreprise-de-construction"
+              target="_blank"
+              class="text-gray-500 hover:text-white transition text-xs"
+              >GitHub</a
+            >
+          </div>
+        </div>
+
+        <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="500">
+          <div>
+            <span class="tag bg-green-900/30 text-green-400"
+              >Infrastructure</span
+            >
+            <h3 class="text-xl font-bold mt-4 mb-2">
+              <i class="bi bi-cpu text-green-400 mr-2"></i>AI Context Bridge
+            </h3>
+            <p class="text-gray-400 text-sm mb-6">
+              TypeScript SDK for Model Context Protocol (MCP) integrations.
+            </p>
+          </div>
+          <div class="flex items-center space-x-4">
+            <span class="text-gray-600 italic text-xs">Library/Core</span>
+            <a
+              href="https://github.com/othmane456/ai-context-bridge"
+              target="_blank"
+              class="text-gray-500 hover:text-white transition text-xs"
+              >GitHub</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="glass-card p-8 border-blue-500/20 shadow-blue-500/5"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
+          <div>
+            <span class="tag bg-cyan-900/30 text-cyan-400">Master Brand</span>
+            <h3 class="text-xl font-bold mt-4 mb-2">
+              <i class="bi bi-person-badge text-cyan-400 mr-2"></i>Personal
+              Portfolio
+            </h3>
+            <p class="text-gray-400 text-sm mb-6">
+              The engineering hub (this site) organizing all digital assets.
+            </p>
+          </div>
+          <div class="flex items-center space-x-4">
+            <a
+              href="https://portofolio-theta-eight.vercel.app/"
+              class="text-white font-bold hover:text-blue-500 transition text-sm underline decoration-blue-500"
+              >Active</a
+            >
+            <a
+              href="https://github.com/othmane456/portofolio"
+              target="_blank"
+              class="text-gray-500 hover:text-white transition text-xs"
+              >GitHub</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates" class="max-w-6xl mx-auto px-4 pb-32">
+      <h2
+        class="text-2xl font-bold mb-12 flex items-center"
+        data-aos="fade-right"
+      >
+        <span class="w-8 h-[2px] bg-blue-500 mr-4"></span> Professional
+        Certifications
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a
+          href="الشهادات/CS50x.pdf"
+          target="_blank"
+          class="cert-card hover:cursor-pointer"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <span
+            class="text-red-500 text-sm font-bold tracking-wider uppercase mb-1 block"
+          >
+            <i class="bi bi-bank mr-2"></i>Harvard University
+          </span>
+          <h3 class="text-lg font-bold mb-2 text-white">
+            CS50: Intro to Computer Science
+          </h3>
+          <p class="text-gray-400 text-xs mb-4">
+            Completed 10 problem sets and final project.
+          </p>
+          <span
+            class="text-red-400 text-xs mt-2 font-bold uppercase tracking-wider block"
+            >View Certificate ↗</span
+          >
+        </a>
+
+        <a
+          href="الشهادات/free code.pdf"
+          target="_blank"
+          class="cert-card hover:cursor-pointer"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <span
+            class="text-amber-500 text-sm font-bold tracking-wider uppercase mb-1 block"
+          >
+            <i class="bi bi-braces-asterisk mr-2"></i>freeCodeCamp
+          </span>
+          <h3 class="text-lg font-bold mb-2 text-white">
+            Front End Development Libraries
+          </h3>
+          <p class="text-gray-400 text-xs mb-4">
+            React, Redux, Bootstrap, Sass, jQuery.
+          </p>
+          <span
+            class="text-amber-400 text-xs mt-2 font-bold uppercase tracking-wider block"
+            >View Certificate ↗</span
+          >
+        </a>
+
+        <a
+          href="الشهادات/javascript.pdf"
+          target="_blank"
+          class="cert-card hover:cursor-pointer"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <span
+            class="text-yellow-500 text-sm font-bold tracking-wider uppercase mb-1 block"
+          >
+            <i class="bi bi-filetype-js mr-2"></i>freeCodeCamp
+          </span>
+          <h3 class="text-lg font-bold mb-2 text-white">
+            Legacy JS Algorithms & Data
+          </h3>
+          <p class="text-gray-400 text-xs mb-4">
+            Core JavaScript, OOP, Functional Programming.
+          </p>
+          <span
+            class="text-yellow-400 text-xs mt-2 font-bold uppercase tracking-wider block"
+            >View Certificate ↗</span
+          >
+        </a>
+
+        <a
+          href="الشهادات/manara-Front-end (2).pdf"
+          target="_blank"
+          class="cert-card hover:cursor-pointer"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <span
+            class="text-emerald-500 text-sm font-bold tracking-wider uppercase mb-1 block"
+          >
+            <i class="bi bi-laptop mr-2"></i>Manara
+          </span>
+          <h3 class="text-lg font-bold mb-2 text-white">
+            Frontend Engineering with React
+          </h3>
+          <p class="text-gray-400 text-xs mb-4">
+            Advanced React development path.
+          </p>
+          <span
+            class="text-emerald-400 text-xs mt-2 font-bold uppercase tracking-wider block"
+            >View Certificate ↗</span
+          >
+        </a>
+
+        <a
+          href="الشهادات/IBMDesign20250508-27-xj8frn.pdf"
+          target="_blank"
+          class="cert-card hover:cursor-pointer"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
+          <span
+            class="text-indigo-500 text-sm font-bold tracking-wider uppercase mb-1 block"
+          >
+            <i class="bi bi-cloud-check mr-2"></i>IBM SkillsBuild
+          </span>
+          <h3 class="text-lg font-bold mb-2 text-white">
+            Web Development Fundamentals
+          </h3>
+          <p class="text-gray-400 text-xs mb-4">
+            Core concepts of modern web architecture.
+          </p>
+          <span
+            class="text-indigo-400 text-xs mt-2 font-bold uppercase tracking-wider block"
+            >View Certificate ↗</span
+          >
+        </a>
+
+        <a
+          href="الشهادات/McKinsey.orgForward20251211-30-ltnhr0.pdf"
+          target="_blank"
+          class="cert-card hover:cursor-pointer"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
+          <span
+            class="text-cyan-500 text-sm font-bold tracking-wider uppercase mb-1 block"
+          >
+            <i class="bi bi-briefcase mr-2"></i>McKinsey & Company
+          </span>
+          <h3 class="text-lg font-bold mb-2 text-white">
+            McKinsey Forward Program
+          </h3>
+          <p class="text-gray-400 text-xs mb-4">
+            Problem-solving, communication, and digital toolkit.
+          </p>
+          <span
+            class="text-cyan-400 text-xs mt-2 font-bold uppercase tracking-wider block"
+            >View Certificate ↗</span
+          >
+        </a>
+      </div>
+    </section>
+
+    <footer
+      class="border-t border-gray-900 py-12 text-center text-gray-600"
+      data-aos="fade-up"
+    >
+      <p class="text-sm italic">"Precision in code, excellence in design."</p>
+      <p class="text-xs mt-4 uppercase tracking-widest">
+        © 2026 Othmane El Foual
+      </p>
+    </footer>
+
+    <button id="scrollTopBtn" onclick="scrollToTop()" title="Go to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        offset: 50,
+        once: true,
+        easing: "ease-out",
+      });
+
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 400) {
+          scrollTopBtn.classList.add("show");
+        } else {
+          scrollTopBtn.classList.remove("show");
+        }
+      });
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </body>
+</html>
